@@ -11,10 +11,10 @@ CACHE_JSONS = {}
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 PACKAGES_DIR = os.path.join(ROOT_DIR, "packages")
 PACKAGES = [
-    "lxgw-wenkai-webfont",
-    "lxgw-wenkai-tc-webfont",
-    "lxgw-wenkai-lite-webfont",
-    "lxgw-wenkai-screen-webfont",
+    "webfont-lxgw-wenkai",
+    "webfont-lxgw-wenkai-tc",
+    "webfont-lxgw-wenkai-lite",
+    "webfont-lxgw-wenkai-screen",
 ]
 f = open('unicode.json', 'r')
 UNICODE_RANGES = json.load(f)
@@ -24,13 +24,13 @@ def ensure_dir(path):
     Path(path).mkdir(parents=True, exist_ok=True)
 
 def get_latest_release(repo):
-    if repo == "lxgw-wenkai-webfont":
+    if repo == "webfont-lxgw-wenkai":
         repo = "LXGWWenKai"
-    if repo == "lxgw-wenkai-tc-webfont":
+    if repo == "webfont-lxgw-wenkai-tc":
         repo = "LXGWWenKaiTC"
-    if repo == "lxgw-wenkai-lite-webfont":
+    if repo == "webfont-lxgw-wenkai-lite":
         repo = "LXGWWenKai-Lite"
-    if repo == "lxgw-wenkai-screen-webfont":
+    if repo == "webfont-lxgw-wenkai-screen":
         repo = "LXGWWenKai-Screen"
     if CACHE_JSONS.get(repo):
         return CACHE_JSONS[repo]
@@ -153,7 +153,7 @@ def build_npm_package(package):
     with open(main_css_path, 'w', newline='\n') as f:
         f.write(main_css)
     # subset fonts in parallel
-    with Pool(4) as pool:
+    with Pool(8) as pool:
         pool.map(subset_worker, tasks)
 
 def update_version(package, version):
