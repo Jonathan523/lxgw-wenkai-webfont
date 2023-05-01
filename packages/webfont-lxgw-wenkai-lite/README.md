@@ -1,3 +1,3 @@
-# lxgw-wenkai-lite-webfont
+# webfont-lxgw-wenkai-lite
 
-Please refer to https://github.com/chawyehsu/lxgw-wenkai-webfont for details.
+Please refer to https://github.com/Jonathan523/lxgw-wenkai-webfont for details.

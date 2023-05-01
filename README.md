@@ -92,8 +92,8 @@ The following are some `cdnjs` mirrors for mainland China, which have high servi
   + ...
 ```html
 <!-- example of mirror cdn.bootcdn.net-->
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.6.0/style.min.css" />
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.6.0/style.min.css" />
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/webfont-lxgw-wenkai/1.0.0/style.min.css" />
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/webfont-lxgw-wenkai-screen/1.0.0/style.min.css" />
 ```
 **Attention**: **ONLY** webfont `LXGW WenKai` and its screen version `LXGW WenKai Screen` are available at `cdnjs`, whose version is both the latest `1.6.0`. So are the mirrors.
 
